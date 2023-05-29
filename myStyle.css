@@ -1,0 +1,43 @@
+body {
+  background: linear-gradient(to right, #629ddb, #4581cf);
+}
+
+.frame1-article-img {
+  position: relative;
+  left: -100%;
+}
+
+.frame1-article-img.visible {
+  position: relative;
+  left: 0%;
+  animation: slideAnimation 1s ease-in-out forwards;
+}
+
+@keyframes slideAnimation {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.img-female {
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.img-female.fade-in {
+  opacity: 1;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
