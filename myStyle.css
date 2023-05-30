@@ -1,43 +1,115 @@
-body {
-  background: linear-gradient(to right, #629ddb, #4581cf);
-}
-
-.frame1-article-img {
-  position: relative;
-  left: -100%;
-}
-
-.frame1-article-img.visible {
-  position: relative;
-  left: 0%;
-  animation: slideAnimation 1s ease-in-out forwards;
-}
-
-@keyframes slideAnimation {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0%;
-  }
-}
-
-.img-female {
-  display: block;
-  margin: 0 auto;
-  opacity: 0;
-  transition: opacity 1s ease-in;
-}
-
-.img-female.fade-in {
-  opacity: 1;
-}
-
-@keyframes fadeInAnimation {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 20%;
+  }
+}
+
+@keyframes slideInLeft-logo {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 75%;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    right: -90%;
+  }
+  to {
+    right: 60%;
+  }
+}
+
+body {
+  background: linear-gradient(to right, #629ddb, #4581cf);
+}
+
+.animation {
+  position: relative;
+}
+
+.female {
+  position: absolute;
+  left: 50%;
+  top: 300px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.headline1 {
+  position: absolute;
+  top: 600px;
+  animation: slideInLeft 2s ease-in forwards;
+}
+
+.female.fade-out {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+.headline2 {
+  position: absolute;
+  top: 80px;
+  opacity: 0;
+  animation: slideInRight 2s ease-in 3s forwards;
+}
+
+.headline1.scale-out {
+  transform: scale(0) translate(100%, -100%);
+  transition: transform 1s ease-in;
+}
+
+.subheadline {
+  position: absolute;
+  top: 250px;
+  right: 5%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in 5s forwards;
+}
+
+.learnmore {
+  position: absolute;
+  left: 40%;
+  bottom: -650px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in 7s forwards;
+}
+
+.logo {
+  position: absolute;
+  padding-top: 20px;
+  left: -100%;
+  top: 60%;
+  animation: slideInLeft-logo 1s ease-in 9s forwards;
+}
+
+.replay {
+  position: absolute;
+  left: 46%;
+  bottom: -750px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in 10s forwards;
 }
