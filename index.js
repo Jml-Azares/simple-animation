@@ -8,9 +8,9 @@ setTimeout(() => {
 }, 2000);
 
 setTimeout(() => {
-  femaleImage.style.opacity = "0"; // Fade out the female image
-}, 3000); // Delay the fade-out of the female image by 5 seconds
+  femaleImage.style.opacity = "0";
+}, 3000);
 
 setTimeout(() => {
   articleImage.classList.remove("visible");
-}, 7000); // Remove the 'visible' class from the second image after 7 seconds
+}, 6000);
